@@ -22,7 +22,6 @@ ComfyJS.onConnected = (address, port, isFirstConnect) => {
 }
 
 let savedChannel = window.localStorage.getItem("ratingChannel") || undefined
-console.log(savedChannel.trim().toLowerCase())
 if(savedChannel) {
     channelEl.value = savedChannel
     ComfyJS.Init(savedChannel)
