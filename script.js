@@ -88,6 +88,9 @@ function messageHandler(user, message) {
     }
 
     answer = parseFloat(answer)
+    if (answer < 1 || answer > 10) {
+        return
+    }
     score += answer
     users.push(user)
     counterEl.innerText = users.length
