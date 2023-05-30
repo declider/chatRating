@@ -101,7 +101,7 @@ function stop() {
 
     btnEl.innerText = "СТАРТ"
     btnEl.style.backgroundColor = "rgb(93, 129, 93)"
-    infoTextEl.innerHTML = "Голование окончено!<br><br>"
+    infoTextEl.innerHTML = "Голосование окончено!<br><br>"
 
     if(users.length > 0) {
         let result = (score/users.length).toFixed(2)
