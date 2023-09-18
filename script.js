@@ -13,43 +13,19 @@ let timerValue = 0
 let users = []
 let score = 0.0
 
-ComfyJS.onChat = ( user, message, flags, self, extra ) => {
-    messageHandler(user, message)
-}
 
-ComfyJS.onConnected = (address, port, isFirstConnect) => {
+const params = (new URL(document.location)).searchParams
+const channel = params.get("channel") || null
+
+if ( channel ) {
+    channelEl.parentNode.removeChild(channelEl)
     btnEl.disabled = false
 }
 
-let savedChannel = window.localStorage.getItem("ratingChannel") || undefined
-if(savedChannel) {
-    channelEl.value = savedChannel
-    ComfyJS.Init(savedChannel)
-}
-
-function changeChannel() {
-    let channel = channelEl.value
-    if(channelEl.value) {
-        channel = channel.toLowerCase().trim()
-        try {
-            ComfyJS.Disconnect()
-        } catch {}
-        ComfyJS.Init(channel)
-        window.localStorage.setItem("ratingChannel", channel)
-    } else {
-        window.localStorage.removeItem("ratingChannel")
-    }
-}
 
 function start() {
     if(started) {
         stop()
-        return
-    }
-    
-    let channel = channelEl.value
-    if(!channel){
-        alert("Не указан канал!")
         return
     }
 
@@ -87,9 +63,11 @@ function messageHandler(user, message) {
     }
 
     answer = parseFloat(answer)
+
     if (answer < 1 || answer > 10) {
         return
     }
+
     score += answer
     users.push(user)
     counterEl.innerText = users.length
@@ -101,7 +79,10 @@ function stop() {
 
     btnEl.innerText = "СТАРТ"
     btnEl.style.backgroundColor = "rgb(93, 129, 93)"
-    infoTextEl.innerHTML = "Голосование окончено!<br><br>"
+    infoTextEl.innerHTML = "Голование окончено!<br><br>"
+    btnEl.disabled = true 
+    // Да, нужно F5 чтобы запустить голосование заново
+    // МНе лень писать пару строчек чтобы сбрасывать таймеры, списки, текста в html и чёт там ещё
 
     if(users.length > 0) {
         let result = (score/users.length).toFixed(2)
@@ -110,7 +91,9 @@ function stop() {
     } else {
         scoreEl.innerText = "Никто не проголосовал :("
     }
+
     started = false
+
 }
 
 function onTimer() {
