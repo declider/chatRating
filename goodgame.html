@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <label for="timer">Таймер (в минутах)</label>
+    <input type="number" name="timer" id="timer" placeholder="0" value="0" min="0" max="10">
+
+    <button id="start-button" onclick="start()" disabled>СТАРТ</button>
+
+    <br>
+    <div id="channel">
+        НЕ УКАЗАН GOODGAME ID (в текущей ссылке добавить ?channel=СЮДА)<br>
+        ID можно взять если открыть плеер вашего стрима GoodGame отдельным окном<br>
+        Цифры после знака вопроса в ссылке и есть ID
+    </div>
+    <div id="main">
+        <p id="info">
+            <text id="info-text">
+                Голосование в чате!<br>
+                Напишите оценку от 1 до 10<br>
+            </text>
+            Проголосовавших: <span id="counter">0</span>
+        </p>
+        
+        <div id="score"></div>
+        
+    </div>
+    
+    <!-- <a id="widget-link" href="http://declider.github.io/rating/widget?channel=">Версия в виде виджета для OBS</a> -->
+
+    <script src="script.js"></script>
+    <script src="goodgame.js"></script>
+</body>
+</html>
