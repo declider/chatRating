@@ -19,7 +19,7 @@ if( !channel ) {
     socket.onmessage = function(e) {
         let message = JSON.parse(e.data)
         if (message.type == "message") {
-            messageHandler(message.data.user, message.data.text)
+            messageHandler(message.data.user_name, message.data.text)
         }
     }
 }
