@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rating</title>
+    <title>Twitch Chat Rating</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
 </head>
@@ -12,11 +12,21 @@
 
     <label for="timer">Таймер (в минутах)</label>
     <input type="number" name="timer" id="timer" placeholder="0" value="0" min="0" max="10">
-
+    &nbsp;&nbsp;&nbsp;
+    <label for="mode" onmouseover="showModeInfo()" onmouseleave="hideModeInfo()">Режим</label>
+    <select name="mode" id="mode" onmouseover="showModeInfo()" onmouseleave="hideModeInfo()">
+        <option value="only">Единственное число</option>
+        <option value="first">Первое число</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;
     <button id="start-button" onclick="start()" disabled>СТАРТ</button>
 
     <br>
-    <div id="channel">НЕ УКАЗАН TWITCH КАНАЛ (в текущей ссылке добавить ?channel=СЮДА)</div>
+    <div id="channel">
+        НЕ УКАЗАН TWITCH КАНАЛ (в текущей ссылке добавить ?channel=СЮДА)
+
+        
+    </div>
     <div id="main">
         <p id="info">
             <text id="info-text">
@@ -29,8 +39,22 @@
         <div id="score"></div>
         
     </div>
-    
-    <!-- <a id="widget-link" href="http://declider.github.io/rating/widget?channel=">Версия в виде виджета для OBS</a> -->
+
+    <div id="mode-info">
+        (можете это не менять и не забивать голову)
+        <hr>
+        <div>
+            Единственное число - считаются только сообщения состоящие исключительно из одного числа,
+            но сообщения длиннее одного числа будут проигнорированы.
+        </div>
+        <img src="onlyMode.png">
+        <hr>
+        <div>
+            Первое число - считаются числа с которых начинаются сообщения,
+            но могут засчитываться лишние сообщения не относящиеся к оценке.
+        </div>
+        <img src="firstMode.png">
+    </div>
 
     <script src="script.js"></script>
     <script src="twitch.js"></script>
