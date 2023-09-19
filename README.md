@@ -14,7 +14,8 @@
 > https://declider.github.io/chatRating/goodgame?channel=172112
 
 Тут уже надо достать ID гудгейма. Его можно найти если на нужном канале гудгейма открыть плеер или чат в отдельном окне. Ссылка в этом окне будет выглядеть так:  
-> https://goodgame.ru/player?172112  
+> https://goodgame.ru/player?172112
+> 
 > https://goodgame.ru/chat/172112
 
 Вот 172112 и есть нужный ID
