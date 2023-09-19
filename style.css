@@ -20,6 +20,17 @@ input::placeholder {
     color:rgb(138, 138, 138);
 }
 
+select {
+    background-color: rgb(43, 43, 43);
+    border: none;
+    outline: none;
+}
+
+option {
+    border: none;
+    outline: none;
+}
+
 button {
     background-color: rgb(93, 129, 93);
     text-align: center;
@@ -52,3 +63,37 @@ p {
     position: fixed;
     bottom: 10px;
 }
+
+#mode-info {
+    background-color: rgb(37, 37, 37);
+    position: absolute;
+    pointer-events: none;
+    width: 40%;
+    height: fit-content;
+    left: 30%;
+    top: 10%;
+    display: none;
+}
+
+.new-score {
+    position: absolute;
+    font-size: 2rem;
+    animation: newscore 1s linear 1 forwards;
+}
+
+@keyframes newscore {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(12px);
+        opacity: 1;
+    }
+  
+    100% {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+  }
