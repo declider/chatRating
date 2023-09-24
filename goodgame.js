@@ -1,5 +1,5 @@
 if( !channel ) {
-    alert(`НЕ УКАЗАН GOODGAME ID (в ссылке добавить ?channel=ID)\nЕго можно взять в открытом GG плеере в отдельном окне`)
+    alert(`НЕ УКАЗАН GOODGAME ID (в ссылке добавить ?channel=ID)\nЕго можно взять в открытом GG плеере/чате в отдельном окне`)
 } else {
     let socket = new WebSocket("wss://chat-1.goodgame.ru/chat2/")
     socket.onopen = function(e) {
