@@ -66,9 +66,9 @@ function messageHandler(user, message) {
 
     let answer
     if(mode=="only") {
-        answer = message.trim()
+        answer = message.trim().replace(",",".")
     } else if (mode=="first") {
-        answer = message.split(" ")[0].replace(",",".")
+        answer = message.split(" ")[0].trim().replace(",",".")
     }
     
     if(isNaN(answer)) {
