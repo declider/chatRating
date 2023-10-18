@@ -122,7 +122,7 @@ function stop() {
 
     btnEl.innerText = "СТАРТ"
     btnEl.style.backgroundColor = "rgb(93, 129, 93)"
-    infoTextEl.innerHTML = "Голование окончено!<br><br>"
+    infoTextEl.innerHTML = "Голосование окончено!<br><br>"
     btnEl.disabled = true 
     // Да, нужно F5 чтобы запустить голосование заново
     // МНе лень писать пару строчек чтобы сбрасывать таймеры, списки, текста в html и чёт там ещё
