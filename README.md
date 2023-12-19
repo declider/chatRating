@@ -11,17 +11,17 @@
 ---
 
 Для Гудгейма ссылка будет выглядеть так:  
-> https://declider.github.io/chatRating/goodgame?channel=172112
+> https://declider.github.io/chatRating/goodgame?channel=123456
 
 Тут уже надо достать ID гудгейма. Его можно найти если на нужном канале гудгейма открыть плеер или чат в отдельном окне. Ссылка в этом окне будет выглядеть так:  
-> https://goodgame.ru/player?172112
+> https://goodgame.ru/player?123456
 > 
-> https://goodgame.ru/chat/172112
+> https://goodgame.ru/chat/123456
 
-Вот 172112 и есть нужный ID
+В этом примере 123456 и есть нужный ID
 
 ---
 
-Использовано:
+Использовано:  
 ComfyJS - https://github.com/instafluff/ComfyJS  
 Nunito - https://fonts.google.com/specimen/Nunito
