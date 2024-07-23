@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+    line-height: 150%;
+    text-align: center;
+    box-sizing: border-box;
+    color: white;
+}
+
+html {
+	font-size: 6.6vw;
+}
+
+@media (min-aspect-ratio: 1/1) {
+	html {
+		font-size: 6.6vw;
+	}
+}
+
+@media (max-aspect-ratio: 1/1) {
+	html {
+		font-size: 6.6vh;
+	}
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+body, html {
+    overflow: -moz-scrollbars-none; /* Для Firefox */
+    -ms-overflow-style: none; /* Для IE и Edge */
+    scrollbar-width: none; /* Для Firefox */
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none; /* Для Webkit-браузеров */
+}
+
+
+#info, #result {
+    width: 99%;
+    height: 99%;
+    background-color: rgb(27, 27, 27);
+    border-radius: 20px;
+	padding: 10px;
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    position: absolute;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+}
+
+#info *, #result * {
+	overflow: visible;
+}
+
+#timer, #score {
+    font-size: 2rem;
+}
