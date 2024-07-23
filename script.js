@@ -28,6 +28,9 @@ if ( channel ) {
 
 
 function start() {
+    
+    document.querySelector("#obs-widget") && (document.querySelector("#obs-widget").style.display = "none")
+    
     if(started) {
         stop()
         return
