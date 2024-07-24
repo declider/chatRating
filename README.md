@@ -3,6 +3,12 @@
 
 ---
 
+# Версия в виде виджета для OBS
+
+[ЗДЕСЬ](https://github.com/declider/chatRating/blob/main/widget/readme.md)
+
+---
+
 Для Твича ссылка будет выглядеть так:
 > https://declider.github.io/chatRating/twitch?channel=forsen
 
