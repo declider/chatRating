@@ -102,6 +102,7 @@ p {
 #obs-widget {
 	position: absolute;
 	bottom: 10px;
-	left:10px;
-	font-size: 1.125rem;
+	left: 10px;
+	font-size: 1rem;
 }
+
